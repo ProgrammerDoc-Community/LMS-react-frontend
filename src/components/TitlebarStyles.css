@@ -1,0 +1,49 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.hero .text{
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 25rem;
+}
+.hero .text h1{
+    font-size: 4.5rem;
+    line-height: 77px;
+    background: linear-gradient(180deg, #1584EA 0%, rgba(0, 5, 6, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.text p{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(270.55deg, #1584EA 31.69%, rgba(0, 5, 6, 0.8) 102.41%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero .btn{
+    background: rgba(97, 190, 220, 0.62);
+    border-radius: 80px;
+}
+
+@media screen and (max-width: 640px){
+    .hero .text h1{
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+    .text p{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+    }
+}
