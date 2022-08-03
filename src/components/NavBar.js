@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa';
 
-import logo from '../assets/logo.png';
+import Logo from '../assets/logo.png';
 import './NavbarStyles.css';
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div className={color ? 'header header-bg' : 'header'}>
-        <Link to='/'> <span> <img src={logo} /> Learning Management System</span> </Link>
+        <Link to='/'> <span> <img src={Logo} alt='Logo' /> Learning Management System</span> </Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li>
                 <Link to='/'>SIGN IN</Link>
