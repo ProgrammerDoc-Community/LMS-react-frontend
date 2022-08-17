@@ -2,3 +2,41 @@
     width: 380px;
     height: 230px;
 }
+.card2 img{
+    padding-left: 60rem;
+}
+.card1, .card2, .card3 {
+    background: #f6e8e2e8;
+    padding: 60px;
+}
+.content{
+    color: #000;
+    font-size: 3rem;
+    font-weight: 700;
+    position: absolute;
+    padding-left: 12rem;
+}
+.spec1{
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 400;
+    position: absolute;
+    top: 65rem;
+    left: 37rem;
+}
+.spec2{
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 400;
+    position: absolute;
+    top: 88rem;
+    right: 37rem;
+}
+.spec3{
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 400;
+    position: absolute;
+    top: 110rem;
+    left: 30rem;
+}
