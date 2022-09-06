@@ -26,10 +26,10 @@ const Navbar = () => {
         <Link to='/'> <span> <img src={Logo} alt='Logo' /> Learning Management System</span> </Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li>
-                <Link to='/'>SIGN IN</Link>
+                <Link to='/register'>SIGN IN</Link>
             </li>
             <li>
-                <Link to='/'>REGISTER</Link>
+                <Link to='/register'>REGISTER</Link>
             </li>
         </ul>
 
