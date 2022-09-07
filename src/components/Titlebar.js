@@ -11,7 +11,7 @@ const Titlebar = () => {
             <p>Getting the time to learn from teachers <br></br> remotely for a better and perfect 
             community in <br></br> the next generation to come </p>
             <div>
-                <Link to="/" className='btn'>GET STARTED</Link>
+                <Link to="/register" className='btn'>GET STARTED</Link>
             </div>
         </div>
     </div>
