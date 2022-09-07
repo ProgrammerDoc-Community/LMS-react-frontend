@@ -1,5 +1,5 @@
 body,
-input {
+input, select {
     font-family: "Poppins", sans-serif;
 }
 
@@ -94,6 +94,29 @@ form.sign-in-form {
     font-weight: 500;
 }
 
+.select-field{
+    max-width: 300px;
+    width: 100%;
+    background-color: #f0f0f0;
+    outline: none;
+    margin: auto;
+    height: 55px;
+    border: none;
+    border-radius: 55px;
+    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.2rem;
+    position: relative;
+}
+
+.select-field option{
+    color: rgb(30, 28, 28);
+    font-weight: 500;
+}
+
 .btn {
     width: 150px;
     background-color: #5995fd;
@@ -166,7 +189,7 @@ form.sign-in-form {
 }
 
 .right-panel .content{
-    right: 1rem;
+    right: 12rem;
 }
 
 .left-panel .image{

@@ -7,6 +7,13 @@ import "./LoginRegisterStyles.css";
 
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
+
+  const [showhide, setshowhide] = useState("");
+  const handleshowhide = (event) => {
+    const getuser = event.target.value;
+    setshowhide(getuser);
+  };
+
   return (
     <div className={`container ${addclass}`}>
       <div className="forms-container">
@@ -50,14 +57,37 @@ const LoginRegister = () => {
             </div>
             <div className="input-field">
               <i>
-                <FaLock />
+                <FaUserGraduate />
               </i>
-              <select className='transparent'>
-                <option>Select your Profile</option>
-                <option value='1'>Teacher</option>
-                <option value='2'>Student</option>
+              <select name="usertype" className='select-field' onChange={(e) => handleshowhide(e)}>
+                <option value="">Select your Profile</option>
+                <option value="1">Teacher</option>
+                <option value="2">Student</option>
               </select>
             </div>
+
+              {
+                showhide === "1" && (
+                  <div className="input-field">
+                    <i>
+                      <FaRegBuilding />
+                    </i>
+                    <input type="text" placeholder="Subject or Course" />
+                  </div>
+                )
+              }
+
+              {
+                showhide === "2" && (
+                  <div className="input-field">
+                    <i>
+                      <FaRegBuilding />
+                    </i>
+                    <input type="text" placeholder="Class" />
+                  </div>
+                )
+              }
+
             <input type="submit" value="Login" className="btn solid" />
           </form>
         </div>
@@ -66,10 +96,9 @@ const LoginRegister = () => {
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
-            <h3>New here ?</h3>
+            <h3>Join Us</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Enter your information here and start your journey as a Teacher or Student.
             </p>
             <button
               className="btn transparent"
@@ -83,10 +112,9 @@ const LoginRegister = () => {
         </div>
         <div className="panel right-panel">
           <div className="content">
-            <h3>One of us ?</h3>
+            <h3>Welcome Back</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Keep connected with us to continue your journey.
             </p>
             <button
               className="btn transparent"
