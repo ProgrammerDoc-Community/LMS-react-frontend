@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaUser, FaLock, FaRegBuilding, FaUserGraduate } from "react-icons/fa";
+import { FaUser, FaLock, FaRegBuilding, FaUserGraduate, FaLandmark, FaBook } from "react-icons/fa";
 import Old from "../assets/log.svg";
 import New from "../assets/register.svg";
 
@@ -70,7 +70,7 @@ const LoginRegister = () => {
                 showhide === "1" && (
                   <div className="input-field">
                     <i>
-                      <FaRegBuilding />
+                      <FaBook />
                     </i>
                     <input type="text" placeholder="Subject or Course" />
                   </div>
@@ -81,7 +81,7 @@ const LoginRegister = () => {
                 showhide === "2" && (
                   <div className="input-field">
                     <i>
-                      <FaRegBuilding />
+                      <FaLandmark />
                     </i>
                     <input type="text" placeholder="Class" />
                   </div>
