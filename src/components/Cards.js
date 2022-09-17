@@ -10,7 +10,7 @@ const Cards = () => {
       <div className='card1'>
          <img src={Session} alt='Session' />
         <span className='content'>Efficient Sessions</span>
-        <p className='spec1'>Create video, audio and chat sessions</p>
+        <p className='spec1'>Create video, audio and chat sessions</p>  
       </div>
 
       <div className='card2'>
