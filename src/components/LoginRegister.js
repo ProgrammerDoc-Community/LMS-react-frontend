@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { FaUser, FaLock, FaRegBuilding, FaUserGraduate, FaLandmark, FaBook } from "react-icons/fa";
+import {
+  FaUser,
+  FaLock,
+  FaEnvelope,
+  FaUserGraduate,
+  FaLandmark,
+  FaBook,
+  FaRegBuilding,
+} from "react-icons/fa";
 import Old from "../assets/log.svg";
 import New from "../assets/register.svg";
 
@@ -45,9 +53,9 @@ const LoginRegister = () => {
             </div>
             <div className="input-field">
               <i>
-                <FaRegBuilding />
+                <FaEnvelope />
               </i>
-              <input type="text" placeholder="School" />
+              <input type="email" placeholder="Email" />
             </div>
             <div className="input-field">
               <i>
@@ -59,34 +67,43 @@ const LoginRegister = () => {
               <i>
                 <FaUserGraduate />
               </i>
-              <select name="usertype" className='select-field' onChange={(e) => handleshowhide(e)}>
+              <select
+                name="usertype"
+                className="select-field"
+                onChange={(e) => handleshowhide(e)}
+              >
                 <option value="">Select your Profile</option>
                 <option value="1">Teacher</option>
                 <option value="2">Student</option>
               </select>
             </div>
 
-              {
-                showhide === "1" && (
-                  <div className="input-field">
-                    <i>
-                      <FaBook />
-                    </i>
-                    <input type="text" placeholder="Subject or Course" />
-                  </div>
-                )
-              }
+            {showhide === "1" && (
+              <div className="input-field">
+                <i>
+                  <FaBook />
+                </i>
+                <input type="text" placeholder="Subject or Course" />
+              </div>
+            )}
 
-              {
-                showhide === "2" && (
-                  <div className="input-field">
-                    <i>
-                      <FaLandmark />
-                    </i>
-                    <input type="text" placeholder="Class" />
-                  </div>
-                )
-              }
+            {showhide === "2" && (
+              <>
+                <div className="input-field">
+                  <i>
+                    <FaRegBuilding />
+                  </i>
+                  <input type="text" placeholder="Department" />
+                </div>
+
+                <div className="input-field">
+                  <i>
+                    <FaLandmark />
+                  </i>
+                  <input type="text" placeholder="Class" />
+                </div>
+              </>
+            )}
 
             <input type="submit" value="Login" className="btn solid" />
           </form>
@@ -98,7 +115,8 @@ const LoginRegister = () => {
           <div className="content">
             <h3>Join Us</h3>
             <p>
-              Enter your information here and start your journey as a Teacher or Student.
+              Enter your information here and start your journey as a Teacher or
+              Student.
             </p>
             <button
               className="btn transparent"
@@ -113,9 +131,7 @@ const LoginRegister = () => {
         <div className="panel right-panel">
           <div className="content">
             <h3>Welcome Back</h3>
-            <p>
-              Keep connected with us to continue your journey.
-            </p>
+            <p>Keep connected with us to continue your journey.</p>
             <button
               className="btn transparent"
               id="sign-in-btn"
