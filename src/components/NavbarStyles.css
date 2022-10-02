@@ -12,6 +12,7 @@
 
 .header-bg{
     background-color: rgba(0, 0, 0, 0.85);
+    top: -34px;
     transition: .5s;
 }
 
@@ -54,7 +55,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        top: 0;
+        top: -34px;
         left: -100%;
         text-align: center;
         width: 100%;
