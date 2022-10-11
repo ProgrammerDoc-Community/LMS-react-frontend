@@ -68,8 +68,7 @@ const LoginRegister = () => {
           <div className="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Create your account and Start taking your courses.
             </p>
             <button
               className="btn transparent"
@@ -85,8 +84,8 @@ const LoginRegister = () => {
           <div className="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Connect to your account and continue your
+               progress towards Excellency.
             </p>
             <button
               className="btn transparent"
