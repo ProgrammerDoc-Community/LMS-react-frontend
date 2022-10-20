@@ -1,0 +1,12 @@
+.change{
+    background: linear-gradient(180deg, #1584EA 0%, #000506cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.change1{
+    background: linear-gradient(270.55deg, #1584EA 31.69%, rgba(0, 5, 6, 0.8) 102.41%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

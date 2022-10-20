@@ -10,8 +10,8 @@ const NavBar = () => {
     const handleClick = () => setClick(!click)
 
   return (
-    <div className="bg-gray-200">
-      <nav className="bg-gray-700 px-2 py-3">
+    <div>
+      <nav className="w-screen z-10 bg-gray-700 fixed px-2 py-3">
         <div className="flex justify-between items-center">
           <Link className='flex items-center gap-1' to="/">
             <img src={Logo} alt="Logo" width={50} />
@@ -41,12 +41,12 @@ const NavBar = () => {
             <div className="md:hidden" onClick={handleClick}>
                 {
                     !click ?
-                    <button data-mobile-menu className="text-gray-400 py-3 px-2 hover:text-gray-200 block md:hidden">
-                        <FaTimes />
+                    <button data-mobile-menu className="text-gray-400 py-3 hover:text-gray-200 block md:hidden">
+                        <FaBars />
                     </button>
                     :
-                    <button data-mobile-menu className="text-gray-400 py-3 px-2 hover:text-gray-200 block md:hidden">
-                        <FaBars />
+                    <button data-mobile-menu className="text-gray-400 py-3 hover:text-gray-200 block md:hidden">
+                        <FaTimes />
                     </button>
                 }
             </div>
@@ -59,8 +59,8 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className={!click ? 'block' : 'hidden'}>
-            <div className="flex flex-col gap-1 py-3">
+        <div className={!click ? 'hidden' : 'block'}>
+            <div className="flex flex-col gap-2 py-3">
                 <Link to='/' className='bg-gray-900 text-white block px-3 py-2 rounded-md font-medium'>Home</Link>
                 <Link to='/' className='text-gray-300 hover:bg-white/5 active:text-white active:bg-gray-900 block px-3 py-2 rounded-md font-medium'>About</Link>
                 <Link to='/' className='text-gray-300 hover:bg-white/5 active:text-white active:bg-gray-900 block px-3 py-2 rounded-md font-medium'>Features</Link>
