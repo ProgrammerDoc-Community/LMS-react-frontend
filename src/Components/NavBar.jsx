@@ -50,10 +50,10 @@ const NavBar = () => {
                     </button>
                 }
             </div>
-            <Link to='/' className='block text-gray-200 px-5 py-3 rounded-md hover:text-blue-600/80'>
+            <Link to='/login' className='block text-gray-200 px-5 py-3 rounded-md hover:text-blue-600/80'>
                 Sign In
             </Link>
-            <Link to='/' className='block bg-blue-600 text-gray-200 px-5 py-3 rounded-md hover:bg-blue-600/80'>
+            <Link to='/register' className='block bg-blue-600 text-gray-200 px-5 py-3 rounded-md hover:bg-blue-600/80'>
                 Register
             </Link>
           </div>
