@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import React,{useContext, useState} from 'react'
+import {AiOutlineDelete} from 'react-icons/ai'
 import './App.css';
+import { isCompositeComponent } from 'react-dom/test-utils';
 // import React,{useState} from 'react';
 
 function App() {
@@ -28,8 +30,12 @@ function App() {
         </div>
         <div className='todo-list'>
           <div className='todo-list-item'>
-            <h1>New Task </h1>
+            <h3>New Task </h3>
             <p>description</p>
+          </div>
+          <div>
+            <AiOutlineDelete className="icon"/>
+            <button className="check-icon">D</button>
           </div>
         </div>
       </div>
