@@ -115,7 +115,7 @@ h1{
 
 }
 
-.icon{
+/* .icon{
   font-size: 35px;
   cursor: pointer;
   margin-left: 70%;
@@ -126,9 +126,10 @@ h1{
 
 .check-icon{
   margin-left: 10px;
+  margin-top: -10px;
   font-size: 25px;
   color: rgb(8, 8, 8);
 }
 .check-icon:hover{
   color: rgb(36, 116, 36);
-}
+} */

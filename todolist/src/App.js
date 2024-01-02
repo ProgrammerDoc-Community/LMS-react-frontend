@@ -7,6 +7,19 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 function App() {
   const [isCompleteScreen,setIsCompleteScreen]=useState(false)
+  const [allTodos,setTodos]= useState([]);
+  const [newTitle,setNewTitle]=useState("")
+  const [newDescription,setNewDescription]=useState("")
+  const handleAddTodo =()=>{
+    let newTodoItem = {
+      title:newTitle,
+      description:newDescription
+    }
+
+    let updatedTodoArr = [...allTodos];
+    updatedTodoArr.push(newTodoItem);
+    setTodos(updatedTodoArr);
+  }
   return (
     <div className="App">
       <h1>Yika Todos</h1>
@@ -14,14 +27,14 @@ function App() {
         <div className='todo-input'>
           <div className='todo-input-item'>
             <label>Title</label>
-            <input type='text' placeholder='enter a title'/>
+            <input type='text' value={newTitle} onChange={(e)=>setNewTitle(e.target.value)} placeholder='enter a title'/>
           </div>
           <div className='todo-input-item'>
             <label>Description</label>
-            <input type='text' placeholder='enter a description'/>
+            <input type='text' value={newDescription} onChange={(e)=>setNewDescription(e.target.value)} placeholder='enter a description'/>
           </div>
           <div className='todo-input-item'>
-            <button className='primaryBtn'>Add</button>
+            <button className='primaryBtn' onClick={handleAddTodo}>Add</button>
           </div>
         </div>
         <div className='btn-area'>
@@ -29,14 +42,20 @@ function App() {
           <button className={` secondaryBtn isCompleteScreen ${isCompleteScreen === true && `active`}`} onClick={()=>setIsCompleteScreen(true)}>Completed</button>
         </div>
         <div className='todo-list'>
-          <div className='todo-list-item'>
-            <h3>New Task </h3>
-            <p>description</p>
-          </div>
-          <div>
-            <AiOutlineDelete className="icon"/>
-            <button className="check-icon">D</button>
-          </div>
+          {allTodos.map((item,index)=>{
+            return(
+              <div className='todo-list-item' key={index}>
+              <h3>{item.title} </h3>
+              <p>{item.description}</p>
+            </div>
+            /* <div>
+              <AiOutlineDelete className="icon"/>
+              <button className="check-icon">D</button>
+            </div> */
+            );
+          }
+            )
+          }
         </div>
       </div>
     </div>
