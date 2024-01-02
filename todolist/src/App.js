@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React,{useContext, useState} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import {AiOutlineDelete} from 'react-icons/ai'
 import './App.css';
 import { isCompositeComponent } from 'react-dom/test-utils';
@@ -19,7 +19,16 @@ function App() {
     let updatedTodoArr = [...allTodos];
     updatedTodoArr.push(newTodoItem);
     setTodos(updatedTodoArr);
+    localStorage.setItem('todolist',JSON.stringify(updatedTodoArr))
   }
+
+  useEffect(()=>{
+    let savedTodo=JSON.parse(localStorage.getItem('todolist'));
+    if(savedTodo){
+      setTodos(savedTodo);
+    }
+
+  },[])
   return (
     <div className="App">
       <h1>Yika Todos</h1>
